@@ -1,0 +1,28 @@
+// Override Bootstrap Variables
+
+@import "styles/variables/_colors.scss";
+
+
+// Options
+
+// Enable flex. It's the future.
+$enable-flex: true;
+
+
+// Body
+
+$body-bg: $body-bg-color;
+$body-color: $body-fg-color;
+
+
+// Grid breakpoints
+
+// Augment grid breakpoints with xx size.
+$grid-breakpoints: (
+  xs: 0,      // Extra small screen / phone
+  sm: 544px,  // Small screen / phone
+  md: 768px,  // Medium screen / tablet
+  lg: 992px,  // Large screen / desktop
+  xl: 1200px, // Extra large screen / wide desktop
+  xx: 1600px, // Even larger screens
+);

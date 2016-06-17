@@ -1,0 +1,26 @@
+@import "styles/variables/_colors.scss";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+}
+
+.header {
+  color: $header-fg-color;
+  background-color: $header-bg-color;
+  padding: 0.6em 1em;
+}
+
+.content {
+  color: $content-fg-color;
+  background-color: $content-bg-color;
+  flex: 1 0 auto;
+  padding: 3em 2em;
+}
+
+.footer {
+  color: $footer-fg-color;
+  background-color: $footer-bg-color;
+  padding: 0.4em 1em;
+}

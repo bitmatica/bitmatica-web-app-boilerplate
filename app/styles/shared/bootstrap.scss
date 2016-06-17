@@ -1,0 +1,6 @@
+// Import Bootstrap and exposes its rules as a CSS module.
+
+// Import our Bootstrap variable overrides, then import Bootstrap's rules.
+// TODO: Choose only certain Bootstrap style files to import.
+@import "styles/variables/bootstrap";
+@import "~bootstrap/scss/bootstrap.scss";

@@ -1,0 +1,19 @@
+// Z-Index Variables
+//
+// Every usage of z-index should reference a variable defined in this file.
+//
+// Using variables for values in styles is a good pratice in general, but it is
+// especially important z-indices because their values are only meaningful
+// relative to one another. Listing every z-index together in this file allows
+// easy comparison.
+
+// Bootstrap Z-Index Variables
+$zindex-dropdown-backdrop:  990;
+$zindex-navbar:            1000;
+$zindex-dropdown:          1000;
+$zindex-popover:           1060;
+$zindex-tooltip:           1070;
+$zindex-navbar-fixed:      1030;
+$zindex-navbar-sticky:     1030;
+$zindex-modal-bg:          1040;
+$zindex-modal:             1050;

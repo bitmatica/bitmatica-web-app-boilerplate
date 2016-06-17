@@ -1,0 +1,30 @@
+// Text Colors
+$darkest-text-color: #000000;
+$dark-text-color: #333333;
+$normal-text-color: #444444;
+$light-text-color: #666666;
+$lightest-text-color: #999999;
+
+$body-text-color: $normal-text-color;
+$header-text-color: #3e4c6c;
+$link-text-color: #444455;
+$link-hover-text-color: darken($link-text-color, 20%);
+$placeholder-text-color: $lightest-text-color;
+
+// UI Element Colors
+$link-underline-color: lighten($link-text-color, 30%);
+$link-hover-underline-color: $link-hover-text-color;
+$border-color: #eeeeee;
+
+// Section Colors
+$body-fg-color: $normal-text-color;
+$body-bg-color: #ffffff;
+
+$header-fg-color: #ffffff;
+$header-bg-color: #333333;
+
+$content-fg-color: $body-fg-color;
+$content-bg-color: $body-bg-color;
+
+$footer-fg-color: #ffffff;
+$footer-bg-color: #2C2C36;

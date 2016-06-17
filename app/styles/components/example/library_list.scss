@@ -1,0 +1,45 @@
+@import "styles/variables/_colors.scss";
+
+.list {
+  border: 1px solid $border-color;
+  padding: 0.4em;
+  max-width: 24em;
+}
+
+.item {
+  display: block;
+  padding: 0.2em;
+  margin: 0.2em;
+  background-color: #f8f8f8;
+  
+  &:nth-child(2n) {
+    background-color: #f0f0f0
+  }
+  
+  &:hover {
+    background-color: #f0f0ff;
+    text-decoration: none;
+  }
+}
+
+.name {
+  font-size: 1.2em;
+}
+
+.role {
+  color: lighten($body-text-color, 20%);
+  margin-left: 0.5em;
+}
+
+.foo {
+  border-bottom: 1px solid blue;
+}
+
+.button {
+  background-color: red;
+  
+  &:hover {
+    background-color: purple;
+  }
+}
+

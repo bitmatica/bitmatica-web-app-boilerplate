@@ -1,0 +1,70 @@
+// Global Text Styling
+
+@import "styles/variables/colors";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+
+// Font Families
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+// Colors
+body {
+  color: $body-text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-text-color;
+}
+
+a {
+  color: $link-text-color;
+}
+
+a:hover {
+  color: $link-hover-text-color;
+}
+
+::placeholder {
+  color: $placeholder-text-color;
+}
+
+
+// Sizes
+html {
+  // Sets size of 1rem.
+  font-size: 12px;
+  
+  @include media-breakpoint-up(sm) { font-size: 13px; }
+  @include media-breakpoint-up(md) { font-size: 14px; }
+  @include media-breakpoint-up(lg) { font-size: 15px; }
+  @include media-breakpoint-up(xl) { font-size: 16px; }
+  @include media-breakpoint-up(xx) { font-size: 18px; }
+}
+
+h1 { font-size: 3.2em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.0em; }
+
+
+// Spacing
+body {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+}
+
+
+// Rendering
+body {
+  // Fixes OS X rendering fonts too bold.
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

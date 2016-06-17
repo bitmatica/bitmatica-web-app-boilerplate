@@ -1,0 +1,20 @@
+@import "styles/variables/_colors.scss";
+
+.section {
+  margin: 2em 0;
+}
+
+.nestedList {
+  & > li {
+    margin-bottom: 1em;
+  }
+  
+  li li {
+    font-size: 0.9em;
+  }
+}
+
+.metaItem {
+  list-style: none;
+  color: $lightest-text-color;
+}

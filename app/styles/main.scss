@@ -1,0 +1,49 @@
+// Import the global (non-CSS module) styling from styles/global.
+//
+//
+// ===Global Styles===
+//
+// - Reside in `app/styles/global`.
+// - Must only use tag selectors, e.g. `body { ... }`.
+// - Must NOT use class or ID selectors, e.g. `.badge { ... }`.
+// - Used to set default HTML tag styles and/or override default browser styles.
+// - Apply on all pages to the selected tags.
+// - Imported by this main.scss file and built into a global style sheet that
+//   is shipped with all pages.
+//
+//
+// ===Local (CSS Module) Styles===
+//
+// - Reside in `app/styles/shared` and `app/styles/components`.
+// - Must only classname-like selectors, e.g. `.badge { ... }`.
+// - Used to style our React components.
+// - Apply only to the React component tags where they are explicitly used.
+// - Imported by our React component files.
+// - Classname selectors are transformed so there is no possibility of
+//   collisions with global class names -- not that we should have any anyway.
+//
+//
+// ===Variables and Mixins===
+//
+// - Reside in `app/styles/variables` and `app/styles/mixins`.
+// - Imported by either our global or local styles.
+// - Additionally, variables and mixins can imported from Bootstrap, like so
+//   `@import "~bootstrap/scss/mixins/breakpoints"`.
+//
+//
+// ===Bootstrap===
+//
+// - Installed via NPM. Resides in `node_modules/bootstrap`.
+// - Global style resets (to normalize and improve default styling and behavior
+//   of tags) are imported here and apply globally.
+// - Opt-in, classname selectors (e.g. `.btn`) are exposed as CSS module through
+//   `app/styles/shared/bootstrap.scss`. This file bridges the gap between
+//   Bootstrap's global scope and our CSS modules' local scope.
+
+
+// Import our Bootstrap variable overrides, then import Bootstrap's resets.
+@import "styles/variables/_bootstrap.scss";
+@import "~bootstrap/scss/bootstrap-reboot.scss";
+
+// Import our global resets.
+@import "styles/global/typography.scss";
