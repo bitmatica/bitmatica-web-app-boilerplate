@@ -12,6 +12,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ExtendedDefinePlugin = require("extended-define-webpack-plugin");
+const autoprefixer = require("autoprefixer");
 
 
 // -----------------------------------------------------------------------------
@@ -128,6 +129,7 @@ const commonConfig = {
       
       // Local Styles (CSS Modules) Loader
       // - sass: Transform Sass to plain CSS.
+      // - postcss: Apply PostCSS transformations like Autoprefixer.
       // - css: Resolve @import and url(...) statements.
       //        Generate CSS module with locally scoped selectors.
       // - ExtractTextPlugin: Join all CSS imports into one output file.
@@ -135,25 +137,28 @@ const commonConfig = {
         test: /\.scss$/,
         include: paths.stylesLocal,
         loader: ExtractTextPlugin.extract("style", [
-          "css?" + qs({
+          "css?-autoprefixer&" + qs({
             sourceMap: true,
             modules: true,
-            importLoaders: 1,
+            importLoaders: 2,
             localIdentName: "[path][name]__[local]__[hash:base64:5]",
           }),
+          "postcss",
           "sass?" + qs({sourceMap: true}),
         ]),
       },
       
       // Global Styles Loader
       // - sass: Transform Sass to plain CSS.
+      // - postcss: Apply PostCSS transformations like Autoprefixer.
       // - css: Resolve @import and url(...) statements.
       // - ExtractTextPlugin: Join all CSS imports into one output file.
       {
         test: /\.scss$/,
         exclude: paths.stylesLocal,
         loader: ExtractTextPlugin.extract("style", [
-          "css?" + qs({sourceMap: true}),
+          "css?-autoprefixer&" + qs({sourceMap: true}),
+          "postcss",
           "sass?" + qs({sourceMap: true}),
         ]),
       },
@@ -209,6 +214,12 @@ const commonConfig = {
   sassLoader: {
     includePaths: [paths.app],
   },
+
+  postcss: () => [
+    // Disable Flexbox 2009 syntax ("display: -webkit-box;") because it breaks
+    // Safari 8 (and maybe earlier).
+    autoprefixer({flexbox: "no-2009"}),
+  ],
 };
 
 

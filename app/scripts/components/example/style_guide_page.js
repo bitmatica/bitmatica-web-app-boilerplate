@@ -124,6 +124,19 @@ export default React.createClass({
           <img src={pngImg} className={compStyles.image} alt="Example PNG" />
           <img src={svgImg} className={compStyles.image} alt="Example SVG" />
         </section>
+        
+        
+        <h3 className={compStyles.header}>Autoprefixer</h3>
+        
+        <section className={compStyles.section}>
+          <p>The container below uses flexbox which requires vendor prefixes for older browser versions.</p>
+
+          <div className={compStyles.flexContainer}>
+            <div className={compStyles.flexSmall}>Small</div>
+            <div className={compStyles.flexLarge}>Large</div>
+            <div className={compStyles.flexSmall}>Small</div>
+          </div>
+        </section>
       </div>
     );
   },

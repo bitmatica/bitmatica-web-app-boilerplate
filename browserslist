@@ -1,0 +1,6 @@
+# Browser version we support
+# Used by tools like autoprefixer
+# See: https://github.com/ai/browserslist
+
+> 1%
+Last 3 versions

@@ -27,3 +27,18 @@
   box-shadow: 0px 0px 1em 1em rgba(123,155,181,1);
   margin: 2em;
 }
+
+.flexContainer {
+  display: flex;
+  min-height: 40em;
+}
+
+.flexSmall {
+  background: red;
+  flex: 1 0 auto;
+}
+
+.flexLarge {
+  background: blue;
+  flex: 4 0 auto;
+}

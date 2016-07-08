@@ -45,6 +45,7 @@
     "request": "^2.65.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
@@ -64,6 +65,7 @@
     "json-loader": "^0.5.4",
     "mustache": "^2.2.1",
     "node-sass": "^3.7.0",
+    "postcss-loader": "^0.9.1",
     "qs": "^6.2.0",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
